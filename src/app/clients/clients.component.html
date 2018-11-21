@@ -1,9 +1,10 @@
 <div class="container">
   <mat-nav-list>
-    <mat-list-item *ngFor="let client of clients" (click)="getClienInfo(client.general.firstName)">
+    <mat-list-item class="item" *ngFor="let client of clients" (click)="getUserInfo(client.general.firstName)">
       <img matListAvatar src="{{client.general.avatar}}" />
       <h3 matLine>{{ client.general.firstName }}</h3>
       <p matLine>{{ client.job.title }}</p>
     </mat-list-item>
   </mat-nav-list>
+  <app-client-card></app-client-card>
 </div>

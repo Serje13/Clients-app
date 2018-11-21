@@ -1,15 +1,12 @@
+.container {
+  display: flex;
+}
 .comp {
-  width: 380px;
   flex-direction: column;
 }
 .search {
   height: 70px;
-  width: 340px;
 }
 .clients {
   height: 100%;
-  width: 350px;
-}
-.material-icons {
-  font-size: 24px;
 }

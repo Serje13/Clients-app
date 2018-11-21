@@ -1,0 +1,37 @@
+<mat-card *ngIf="client" class="client-card">
+  <mat-card-header>
+    <div class="card-header">
+      <img src="{{client.general.avatar}}" class="client-header-image" />
+      <mat-list role="list">
+        <mat-list-item role="listitem">
+          <mat-card-title
+            ><h2>{{ client.general.firstName }}</h2></mat-card-title
+          >
+        </mat-list-item>
+        <mat-list-item role="listitem">
+          <mat-card-subtitle
+            ><h3>{{ client.job.title }} - {{ client.job.company }}</h3></mat-card-subtitle
+          >
+        </mat-list-item>
+      </mat-list>
+    </div>
+  </mat-card-header>
+  <mat-card-content>
+    <mat-list role="list">
+      <div class="information">
+        <div>
+          <mat-list-item role="listitem"><h4>Contact information:</h4></mat-list-item>
+          <mat-list-item role="listitem">Email>: {{ client.contact.email }}</mat-list-item>
+          <mat-list-item role="listitem">Phone: {{ client.contact.phone }}</mat-list-item>
+        </div>
+        <div>
+          <mat-list-item role="listitem"><h4>Address:</h4></mat-list-item>
+          <mat-list-item role="listitem">Street: {{ client.address.street }}</mat-list-item>
+          <mat-list-item role="listitem">City: {{ client.address.city }}</mat-list-item>
+          <mat-list-item role="listitem">ZipCode: {{ client.address.zipCode }}</mat-list-item>
+          <mat-list-item role="listitem">Country: {{ client.address.country }}</mat-list-item>
+        </div>
+      </div>
+    </mat-list>
+  </mat-card-content>
+</mat-card>
