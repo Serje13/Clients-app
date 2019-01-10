@@ -13,7 +13,7 @@ export class ClientCardComponent implements OnInit {
   client: Client;
 
   constructor(private clientCardService: ClientCardService, private route: ActivatedRoute) {}
-  getInfo(name) {
+  getInfo(name: string) {
     console.log(name);
     if (name) {
       this.clientCardService.getClients().subscribe((clients: Array<Client>) => {

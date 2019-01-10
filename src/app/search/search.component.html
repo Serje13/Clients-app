@@ -1,10 +1,21 @@
 <mat-list class="list" role="list">
   <mat-list-item role="listitem">
-    <mat-form-field>
-      <input matInput type="text" placeholder="Search" [(ngModel)]="value" />
-      <button mat-button *ngIf="value" matSuffix mat-icon-button aria-label="Clear" (click)="value = ''">
-        <mat-icon>close</mat-icon>
-      </button>
-    </mat-form-field>
+    <form class="example-form">
+      <mat-form-field class="example-full-width">
+        <input
+          type="text"
+          placeholder="Searc Clients"
+          aria-label="Number"
+          matInput
+          [formControl]="findControl"
+          [matAutocomplete]="auto"
+        />
+        <mat-autocomplete #auto="matAutocomplete">
+          <mat-option class="options" *ngFor="let result of results" [value]="option">
+            {{ result.general.firstName }} - <small>{{ result.job.title }}</small>
+          </mat-option>
+        </mat-autocomplete>
+      </mat-form-field>
+    </form>
   </mat-list-item>
 </mat-list>

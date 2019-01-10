@@ -12,7 +12,7 @@ export class ClientsComponent implements OnInit {
   name: string;
   @ViewChild(ClientCardComponent)
   private clientCardComponent: ClientCardComponent;
-  getUserInfo(name) {
+  getUserInfo(name: string) {
     this.clientCardComponent.getInfo(name);
   }
   constructor(private clientsService: ClientsService) {}

@@ -8,12 +8,14 @@ import { HttpClientModule } from '@angular/common/http';
 import { MatListModule } from '@angular/material/list';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MatInputModule } from '@angular/material/input';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { MatIconModule } from '@angular/material/icon';
 import { RouterModule } from '@angular/router';
 import { Routes } from '@angular/router';
 import { ClientCardComponent } from './client-card/client-card.component';
 import { MatCardModule } from '@angular/material/card';
+import { MatAutocompleteModule } from '@angular/material/autocomplete';
+import { MatFormFieldModule } from '@angular/material';
 
 const appRoutes: Routes = [
   { path: '', component: ClientsComponent },
@@ -27,10 +29,13 @@ const appRoutes: Routes = [
     MatListModule,
     BrowserAnimationsModule,
     MatInputModule,
-    FormsModule,
     MatIconModule,
     RouterModule.forRoot(appRoutes),
-    MatCardModule
+    MatCardModule,
+    MatAutocompleteModule,
+    FormsModule,
+    MatFormFieldModule,
+    ReactiveFormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
